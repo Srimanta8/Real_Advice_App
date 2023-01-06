@@ -1,0 +1,128 @@
+#root,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  url(/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.card {
+    background-color: rgb(238, 237, 232);
+    width: 50%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 2%;
+    box-shadow: 10px 0px 10px;
+    border:2px solid rgb(201, 12, 12);
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 300px;
+    padding: 5px;
+    width: 150px;
+    opacity: 1;
+    background-color: rgb(204, 245, 243);
+    border: 2px solid rgb(247, 15, 15);
+}
+
+.button span {
+    color: rgb(5, 5, 5);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    font-weight: bolder;
+}
+
+.button:hover {
+    animation: rotate 0.7s ease-in-out both;
+    color: #000;
+}
+
+.button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.6s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
+}
